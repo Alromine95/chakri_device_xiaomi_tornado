@@ -13,6 +13,34 @@ $(call inherit-product, device/xiaomi/tornado/device.mk)
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# some axion flags
+
+# Camera information (multiple sensors supported)
+AXION_CAMERA_REAR_INFO := 50,8
+AXION_CAMERA_FRONT_INFO := 8
+
+# Maintainer name (underscores become spaces in the UI)
+AXION_MAINTAINER := Qbhi
+
+# Processor name (underscores become spaces)
+AXION_PROCESSOR := Mediatek Dimensity 6100
+
+# safely disable libperfmgr without breaking boot (set to true)
+TARGET_DISABLES_LIBPERF ?= true
+
+# High Brightness Mode (HBM)
+HBM_SUPPORTED := false
+HBM_NODE := /sys/class/backlight/panel0-backlight/hbm_mode
+
+# doze flags
+# for devices with doze/sensor related issues 
+TARGET_NEEDS_DOZE_FIX := false
+# doze gestures
+TARGET_DOZE_TAP_PULSE_SUPPORTED ?= false
+TARGET_DOZE_DOUBLE_TAP_PULSE_SUPPORTED ?= false
+TARGET_DOZE_PICKUP_PULSE_SUPPORTED ?= false
+TARGET_DOZE_SIDE_FPS_PULSE_SUPPORTED ?= false
+
 PRODUCT_NAME := lineage_tornado
 PRODUCT_DEVICE := tornado
 PRODUCT_MANUFACTURER := Xiaomi
