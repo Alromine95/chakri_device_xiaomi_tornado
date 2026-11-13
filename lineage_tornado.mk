@@ -23,7 +23,7 @@ AXION_CAMERA_FRONT_INFO := 8
 AXION_MAINTAINER := Qbhi
 
 # Processor name (underscores become spaces)
-AXION_PROCESSOR := Mediatek Dimensity 6100
+AXION_PROCESSOR := Mediatek_Dimensity_6100
 
 # safely disable libperfmgr without breaking boot (set to true)
 TARGET_DISABLES_LIBPERF ?= true
