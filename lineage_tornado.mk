@@ -29,7 +29,7 @@ AXION_PROCESSOR := Mediatek_Dimensity_6100
 TARGET_DISABLES_LIBPERF ?= true
 
 # High Brightness Mode (HBM)
-HBM_SUPPORTED := false
+HBM_SUPPORTED := true
 HBM_NODE := /sys/class/backlight/panel0-backlight/hbm_mode
 
 # doze flags
